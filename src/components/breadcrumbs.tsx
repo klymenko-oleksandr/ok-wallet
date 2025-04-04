@@ -18,7 +18,7 @@ export function Breadcrumbs() {
       <BreadcrumbList>
         <BreadcrumbItem className="hidden md:block">
           <BreadcrumbLink asChild>
-            <Link to="/">Home</Link>
+            <Link to="/">Головна</Link>
           </BreadcrumbLink>
         </BreadcrumbItem>
 
@@ -32,9 +32,7 @@ export function Breadcrumbs() {
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 {isLast ? (
-                    <BreadcrumbItem>
-                      <BreadcrumbPage>{name}</BreadcrumbPage>
-                    </BreadcrumbItem>
+                  <BreadcrumbPage>{name}</BreadcrumbPage>
                 ) : (
                   <BreadcrumbLink asChild>
                     <Link to={path}>{name}</Link>
