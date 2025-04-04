@@ -1,7 +1,6 @@
-import { createFileRoute } from '@tanstack/react-router'
-import { Card, CardAction, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card.tsx';
-import { TrendingUpIcon } from 'lucide-react';
-import { Badge } from '@/components/ui/badge.tsx';
+import { createFileRoute } from '@tanstack/react-router';
+import { SectionCards } from '@/components/section-cards.tsx';
+import { ChartMonthlyBudget } from '@/components/chart-monthly-budget.tsx';
 
 export const Route = createFileRoute('/')({
   component: Index,
@@ -10,41 +9,13 @@ export const Route = createFileRoute('/')({
 function Index() {
   return (
     <div className="p-2">
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <Card>
-          <CardHeader>
-            <CardTitle>Total Revenue</CardTitle>
-            <CardDescription>$1,250.00 in the last 30 days</CardDescription>
-          </CardHeader>
-          <CardFooter>
-            <Badge variant="outline">
-              <TrendingUpIcon />
-              +12.5%
-            </Badge>
-          </CardFooter>
-        </Card>
-        <Card className="@container/card">
-          <CardHeader>
-            <CardDescription>Загальний капітал</CardDescription>
-            <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-              $1,250.00
-            </CardTitle>
-            <CardAction>
-              <Badge variant="outline">
-                <TrendingUpIcon />
-                +12.5%
-              </Badge>
-            </CardAction>
-          </CardHeader>
-          <CardFooter className="flex-col items-start gap-1.5 text-sm">
-            <div className="line-clamp-1 flex gap-2 font-medium">
-              Trending up this month <TrendingUpIcon className="size-4" />
-            </div>
-            <div className="text-muted-foreground">
-              Visitors for the last 6 months
-            </div>
-          </CardFooter>
-        </Card>
+      <div className="@container/main flex flex-1 flex-col gap-2">
+        <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
+          <SectionCards />
+        </div>
+        <div className="px-4 lg:px-6">
+          <ChartMonthlyBudget />
+        </div>
       </div>
     </div>
   )
