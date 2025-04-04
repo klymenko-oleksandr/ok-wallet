@@ -4,7 +4,7 @@ import { defineRouteContext } from '@/router/define-route-context.ts';
 export const Route = createFileRoute('/portfolio/list')({
   component: RouteComponent,
   context: defineRouteContext({
-    breadcrumbName: 'Portfolio list',
+    breadcrumbName: 'Всі портфелі',
   })
 })
 

@@ -14,9 +14,9 @@ export function Breadcrumbs() {
   const filtered = matches.filter((match) => match.pathname !== "/");
 
   return (
-    <Breadcrumb>
+    <Breadcrumb className="hidden md:block">
       <BreadcrumbList>
-        <BreadcrumbItem className="hidden md:block">
+        <BreadcrumbItem>
           <BreadcrumbLink asChild>
             <Link to="/">Головна</Link>
           </BreadcrumbLink>

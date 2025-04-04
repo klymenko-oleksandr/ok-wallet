@@ -5,7 +5,7 @@ import { Outlet } from '@tanstack/react-router';
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
 import { Breadcrumbs } from '@/components/breadcrumbs.tsx';
 
-export default function Page() {
+export default function HomePage() {
   return (
     <SidebarProvider>
       <AppSidebar />
